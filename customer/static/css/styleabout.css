@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'Trebuchet MS', serif;
+
+}
+.hero{
+  color: white;
+  background-image: url("/static/img/maria1.jpg") ;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.navbar{
+  border-bottom: 1px solid #rgba(0,0.8,0,0.3);
+  background:	rgba(0,0.8,0,0.3);
+  height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbarcontainer{
+
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width:100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.navbarmenu{
+  display: flex;
+align-items: center;
+list-style: none;
+
+}
+.navbaritem{
+  height: 80px;
+}
+/*logo styling*/
+#navbarlogo{
+  background-color: #ff8177;
+background-image: linear-gradient(to top, #ff9966, #ff5e62);
+background-size: 100;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+
+.navbarlinks{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  text-decoration: none;
+  height: 100%;
+
+}
+.navbarbtn{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+.button{display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+padding: 10px 20px;
+height: 100%;
+width:100%;
+border:none;
+outline: none;
+border-radius: 20px;
+background: #833ab4;
+background: -webkit-linear-gradient(to right,  #ff9966, #ff5e62 );
+background: linear-gradient(to right,#ff9966, #ff5e62);
+color:#fff;
+transition:all 0.3s ease;
+box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+ }
+
+.navbarlinks:hover{
+  color :#ff5e62;
+  transition:  all 0.3s ease;
+ }
+ .about{
+   background-color:  rgba(0,0.8,0,0.7);
+
+
+}
+.inner-section{
+  position: absolute;
+  bottom: -50px;
+  right: -5px;
+  padding-left: 30px;
+  padding-right: 30px;
+    width: 65%;
+    background-color: rgba(255,153,102,0.8);;
+    margin:left;
+    box-shadow: 13px 12px 8px rgba(0,0,0,0.3);
+}
+.inner-section h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: black;
+}
+.text{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.img{
+  margin-left: 20px;
+  box-shadow: 13px 12px 8px rgba(0,0,0,0.3);
+}
+.descripton{
+  width: 80%;
+  font-size:18px;
+  margin-left:180px;
+}

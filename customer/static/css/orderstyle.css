@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', serif;
+  scroll-behavior: smooth;
+}
+form {width:80%;
+height: 40%;}
+.hero{
+
+  background-image: url("/static/img/maria1.jpg") ;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.row {
+  text-align: center;
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+
+
+}
+
+#myDIV{display: none;
+}
+
+.food{
+margin: auto;
+width: 60%;
+padding: 10px;
+}
+.fooditems, .personalinfo{
+  width: 70%;
+  height: 70%;
+display: grid;
+ background-color: rgba(255,153,102,0.8);
+  position:static;
+  grid-template-rows: auto 3fr;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+  margin: 0 30px;
+}
+h5{ font-size: 15px;}
+.rounded{
+
+   width: 50%;
+   height: 50%;
+   border-radius:  15px 15px 0 0;
+   grid-column: 1/-1;
+   text-align: center;
+}
+h1, .btn{
+
+  grid-column: 1/-1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+align-items: center;
+text-decoration: none;
+padding: 10px 20px;
+height: 60%;
+width:30%;
+border:none;
+outline: none;
+border-radius: 15px;
+background: #833ab4;
+background: -webkit-linear-gradient(to right,  #F8F4A6, #ff5e62 );
+background: linear-gradient(to right,#F8F4A6, #ff5e62);
+color:#fff;
+transition:all 0.3s ease;
+box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.info{
+  width: 90%;
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.personalinfo{
+  display:flex;
+	justify-content: center;
+}
+.street{
+  margin-left: 20px;
+}
+.city{
+  margin-left: 43px;
+}
+input, h5{border-radius: 20px;
+background:	rgba(0,0.8,0,0.2);
+border-color:rgba(0,0.8,0,0.3);}
+::placeholder{
+  color:rgba(0,0.8,0,0.7);
+}
+
+
+.navbar{
+  border-bottom: 1px solid #rgba(0,0.8,0,0.3);
+  background:	rgba(0,0.8,0,0.3);
+  height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbarcontainer{
+
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width:100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/*logo styling*/
+#navbarlogo{
+  background-color: #ff8177;
+background-image: linear-gradient(to top, #ff9966, #ff5e62);
+background-size: 100;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
