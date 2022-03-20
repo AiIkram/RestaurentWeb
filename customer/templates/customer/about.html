@@ -1,0 +1,51 @@
+{% load static %}
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title>Sushi Asia-About</title>
+
+  <link rel="stylesheet" href="{% static 'css/styleabout.css' %}">
+        </head>
+
+
+        <body class="hero" style="font-family:'Trebuchet MS', serif;">
+
+           <nav class="navbar">
+         <div class="navbarcontainer">
+
+           <a href="{% url 'index' %}" id="navbarlogo">SUSHI ASIA <img src="/static/img/sushi.png" height="60px" width="60px" alt=""> </a>
+                      <ul class="navbarmenu">
+                        <li class="navbaritem"><a href="{% url 'menu' %}" class="navbarlinks" id="menu">Menu</a> </li>
+                        <li class="navbaritem"><a href="{% url 'about' %}" class="navbarlinks" id="about" >About us</a></li>
+                        <li class="navbarbtn"><a href="{% url 'login' %}"  class="button" >Staff corner</a></li>
+                      </ul>
+
+         </div>
+
+       </nav>
+       <br><br><br>
+       <div class="about"> <br><br>
+         <img class="img" src="/static/img/chef.jpg" height="80%" > <br><br>
+
+             <div class="inner-section"><br>
+                 <h1>About Us</h1>
+                 <p class="text">
+                   As a young boy growing up in Japan, Nobu Matsuhisa dreamed of becoming a sushi chef in a restaurant where he could create his own menu. It took more than 30 years of experimentation, failure and incompatible business partners to reach his goal, as he worked his way from dishwasher in Tokyo to co-owner of a small sushi establishment in Lima, Peru.
+And on one snowy night in Anchorage, Matsuhisa literally watched his dream go up in flames.
+Today, Matsuhisa and his business partners, who include actor Robert De Niro, operate 22 restaurants around the world. The newest launched in Dubai late last year. Mexico City, Moscow and Cape Town are slated for restaurant openings this spring.
+                 </p>
+
+             </div>
+         <br><br>
+         <div class="descripton">
+           Sushi Asia's fun and creative approach to sushi is showcased through its diverse menu items that offer something for everyone, from revisited local recipes to traditional Jpaanese cuisine, as well  as our homemade signature sauces and Sake selection. We also feature daily specials, and a lunch and dinner menu that can be ordered through delivery or takeout.
+         </div>
+         <br>
+         </div>
+
+<br><br><br><br><br><br>
+
+
+</body>
+</html>

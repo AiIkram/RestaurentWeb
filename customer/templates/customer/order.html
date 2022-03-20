@@ -1,0 +1,172 @@
+{% load static %}
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title>Order </title>
+
+  <link rel="stylesheet" href="{% static 'css/orderstyle.css' %}">
+
+</head>
+  <body class="hero">
+
+
+          <center>
+          <div >
+
+              <form  method="POST">
+<br><br>
+                <div class="fooditems">
+                {% csrf_token %}
+
+                <center>
+                  <br>
+                <h1>Appetizers </h1> </center><br><br>
+                <div class="row">
+                {% for app in APPETIZERS %}
+                <div class="column">
+                <img class="rounded" src="{{ app.image.url }}" width="150" height="100"/>
+                <h5 class="info" >{{ app.name }}: {{ app.price }}$ </h5>
+                {{ app.description }}
+                   <input type="checkbox"  name="items[]" class="form-check-input" value="{{ app.pk }}" >
+                   <br><br><br><br>
+               </div>
+                 {% endfor %}
+               </div>
+             </div>
+             <br><br><br>
+             <div class="fooditems">
+               <center>
+<br>
+             <h1>Rolls </h1> </center> <br><br>
+             <div class="row">
+             {% for r in ROLLS %}
+             <div class="column">
+            <img class="rounded" src="{{ r.image.url }}" width="150" height="100"/>
+             <h5 class="info">{{ r.name }}: {{ r.price }}$</h5>
+             {{ r.description }}
+                <input type="checkbox"  name="items[]" class="form-check-input" value="{{ r.pk }}" >
+            </div>
+              {% endfor %}
+            </div>
+          </div>
+          <br><br><br>
+
+          <div class="fooditems">
+            <center>
+              <br>
+          <h1>Combos </h1></center> <br><br>
+          <div class="row">
+          {% for c in COMBOS %}
+          <div class="column">
+         <img class="rounded" src="{{ c.image.url }}" width="150" height="100"/>
+          <h5 class="info">{{ c.name }}: {{ c.price }}$ </h5>
+          {{ c.description }}
+
+             <input type="checkbox" name="items[]" class="form-check-input" value="{{ c.pk }}" >
+
+         </div>
+           {% endfor %}
+         </div>
+       </div>
+       <br><br><br>
+
+       <div class="fooditems">
+         <center>
+           <br>
+       <h1>Noodles </h1></center><br><br>
+       <div class="row">
+       {% for n in NOODLES %}
+       <div class="column">
+      <img class="rounded" src="{{ n.image.url }}" width="150" height="100"/>
+       <h5 class="info" >{{ n.name }}: {{ n.price }}$ </h5>
+        {{ n.description }}
+          <input type="checkbox" name="items[]" class="form-check-input" value="{{ n.pk }}" >
+
+
+      </div>
+        {% endfor %}
+      </div>
+    </div>
+    <br><br><br>
+
+    <div class="fooditems">
+  <center> <br>  <h1>Salads </h1> </center><br><br>
+    <div class="row">
+    {% for s in SALADS %}
+    <div class="column">
+   <img class="rounded" src="{{ s.image.url }}" width="150" height="100"/>
+    <h5 class="info">{{ s.name }}: {{ s.price }}$ </h5>
+    {{ s.description }}
+       <input type="checkbox"  name="items[]" class="form-check-input" value="{{ s.pk }}" >
+
+   </div>
+     {% endfor %}
+   </div>
+ </div>
+ <br><br><br>
+
+ <div class="fooditems">
+ <center>
+   <br>
+   <h1>Beverages </h1></center> <br><br>
+ <div class="row">
+ {% for b in BEVERAGES %}
+ <div class="column">
+ <img class="rounded" src="{{ b.image.url }}" width="150" height="100"/>
+ <h5 class="info"  >{{ b.name }}: {{ b.price }}$ </h5>
+ {{ b.description }}
+    <input  type="checkbox" class="check" name="items[]" class="form-check-input" value="{{ b.pk }}" >
+<br><br>
+ </div>
+  {% endfor %}
+ </div>
+</div>
+</div>
+</div>
+
+<br><br><br>
+<button class="btn" onclick="ShowAndHide()" width="250px" height="250px">Complete order</button>
+<br><br><br>
+
+<div  id="SectionName" style="display:none" >
+
+<div class="personalinfo" >
+
+<center>
+  <br>
+<p class="inputs"><label for="name">Full Name :</label>
+<input required type="text" class="form-holder" placeholder="Your Name" name="name"/> </p> <br>
+
+<p><label for="email">Your Email: </label>
+<input required type="text" class="form-holder" placeholder="example@example.com" name="email"/> </p><br>
+<p><label  for="street" > Address: </label>
+<input required type="text" class="street" placeholder="1234 main st" name="street"/> </p><br>
+
+<p><label for="city" >City: </label>
+<input required type="text" class="city" placeholder="ex:bouzareah alger" name="city"/> </p>
+<br>
+</center>
+</div>
+<br><br><br>
+
+<button class="btn" width="250px" height="250px">Send order</button>
+
+</div>
+</form>
+  <br><br><br><br><br><br>
+          </center>
+  <script>
+          function ShowAndHide() {
+              var x = document.getElementById('SectionName');
+              if (x.style.display == 'none') {
+                  x.style.display = 'block';
+              } else {
+                  x.style.display = 'none';
+              }
+          }
+          </script>
+
+
+</body>
+</html>

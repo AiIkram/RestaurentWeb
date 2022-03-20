@@ -1,0 +1,38 @@
+{% load static %}
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title>Sushi Asia</title>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+        </head>
+        <body class="hero">
+
+
+          <nav class="navbar">
+         <div class="navbarcontainer">
+<a href="{% url 'index' %}" id="navbarlogo">SUSHI ASIA <img src="/static/img/sushi.png" height="60px" width="60px" alt=""> </a>
+           <ul class="navbarmenu">
+             <li class="navbaritem"><a href="{% url 'menu' %}" class="navbarlinks" id="menu">Menu</a> </li>
+             <li class="navbaritem"><a href="{% url 'about' %}" class="navbarlinks" id="about" >About us</a></li>
+             <li class="navbarbtn"><a href="{% url 'login' %}"  class="button" >Staff corner</a></li>
+           </ul>
+         </div>
+       </nav>
+
+           <!-- end of naavbar code-->
+           <br><br><br>
+       <div class="content">
+         <span>
+          <h1>A TASTE OF JAPAN!</h1>
+           <br>
+          <p>Have fresh sushi delivered straight to your door or reserve a table at ours.
+            <br><br>
+          <a href="{% url 'order' %}" class="button">ORDER NOW</a></p></span>
+       </div>
+
+        </body>
+      </html>
